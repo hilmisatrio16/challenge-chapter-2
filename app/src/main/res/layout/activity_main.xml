@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="20dp"
+    android:background="@drawable/img_background">
+
+    <EditText
+        android:id="@+id/et_cost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/et_cost_of_service"
+        style="@style/TextStyle"
+        android:maxLines="1"
+        android:textSize="20sp"
+        android:minHeight="48dp"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/background_box_edit_text"/>
+
+    <TextView
+        android:id="@+id/tv_QuestionService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_question_of_service"
+        android:layout_marginTop="16dp"
+        style="@style/TextStyle"
+        app:layout_constraintStart_toStartOf="@+id/et_cost"
+        app:layout_constraintTop_toBottomOf="@id/et_cost"
+        />
+
+    <RadioGroup
+        android:id="@+id/rg_OptionService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_QuestionService">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rb_option_amazing"
+            style="@style/RadioButtonStyle" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rb_option_good"
+            style="@style/RadioButtonStyle" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rb_option_ok"
+            style="@style/RadioButtonStyle" />
+    </RadioGroup>
+
+    <Switch
+        android:id="@+id/switch_RoundTip"
+        android:text="@string/sw_round_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/SwitchStyle"
+        app:layout_constraintTop_toBottomOf="@+id/rg_OptionService"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/ButtonStyle"
+        android:id="@+id/btn_Calculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_outline_button"
+        android:text="@string/btn_calculate"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_RoundTip"
+        />
+
+    <TextView
+        android:id="@+id/tv_TipAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_tip_amount"
+        android:layout_marginTop="16dp"
+        style="@style/TextStyle"
+        app:layout_constraintEnd_toEndOf="@+id/btn_Calculate"
+        app:layout_constraintTop_toBottomOf="@id/btn_Calculate" />
+
+    <ImageView
+        android:contentDescription="@string/content_description_image_service"
+        android:id="@+id/iv_img"
+        android:src="@drawable/img_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_TipAmount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
