@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tip Counter App</string>
+    <string name="et_cost_of_service">Biaya layanan</string>
+    <string name="tv_question_of_service">Bagaimana layanannya?</string>
+    <string name="rb_option_amazing">Luar biasa (20%)</string>
+    <string name="rb_option_good">Bagus (18%)</string>
+    <string name="rb_option_ok">Ok (15%)</string>
+    <string name="sw_round_tip">Bulatkan tip?</string>
+    <string name="btn_calculate">MENGHITUNG</string>
+    <string name="tv_tip_amount">Jumlah Tip</string>
+    <string name="content_description_image_service">deskripsi dari gambar servis</string>
+</resources>
